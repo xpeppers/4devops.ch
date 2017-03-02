@@ -1,5 +1,10 @@
 # agile-at-work
 
+### Modify from Github website 
+
+Be Careful the folder with the source is under `_includes`.
+
+
 ### setup
 
 ```
