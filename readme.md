@@ -10,5 +10,4 @@ printf "source 'https://rubygems.org'\ngem 'github-pages'\n" > Gemfile
 
 ```
 bundle exec jekyll serve
-cd php && php -S 0.0.0.0:4044
 ```
