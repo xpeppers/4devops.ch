@@ -1,0 +1,69 @@
+<nav class="navbar navbar-default navbar-fixed-top reveal-menu js-reveal-menu reveal-menu-hidden" style="top: 0;">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-left">
+              <li class="active-forever">
+                <a class="navbar-brand" href="#">
+                  4Devops.ch
+                </a>
+              </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#schedule">{{ site.data.t[page.locale].schedule}}</a></li>
+                <!-- <li><a href="#speakers">Speakers</a></li> -->
+                <li><a href="#sponsors" class="hidden-sm">{{ site.data.t[page.locale].organizers }}</a></li>
+                <li><a href="#venue" class="hidden-sm">{{ site.data.t[page.locale].venue }}</a></li>
+                <li><a href="#footer-action" class="hidden-sm">{{ site.data.t[page.locale].signup }}</a></li>
+                <li><a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfmpVfKAJkBKiR8g0FAfoCQLXTPY0cVKFe0abqsvPkGUwj7gg/viewform" class="hidden-sm">CFP</a></li>
+                <li>
+                  <a href="/">EN</a>
+                </li>
+                <li>
+                  <a href="/it">IT</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header id="top" class="header">
+    <div class="container">
+        <div class="header_top-bg1">
+            <div class="logo">
+                <a href="#" class="heading fadeInDown">
+                  <h1>4Devops.ch</h1>
+                </a>
+            </div>
+        </div>
+
+        <div class="when_where" style="padding-top:60px">
+            <p class="event_when">{{ site.data.t[page.locale].event_when }}</p>
+            <p class="event_where"><strong>{{ site.data.t[page.locale].event_where }}</strong><br/>
+            {{ site.data.t[page.locale].event_address }}</p>
+        </div>
+       
+        <div style="margin-bottom:20px">
+            <div class="col-sm-12 col-md-6 col-md-offset-3"  style="margin-bottom:20px">
+                <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfmpVfKAJkBKiR8g0FAfoCQLXTPY0cVKFe0abqsvPkGUwj7gg/viewform" class="hidden-sm btn btn-lg btn-default btn-block">{{ site.data.t[page.locale].submit_cfp }}</a>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-md-offset-3">
+                <a href="#footer-action" class="hidden-sm btn btn-lg btn-default btn-block">{{ site.data.t[page.locale].join_now }}</a>
+            </div>
+        </div>
+
+      <!--  {% include partials/signup-form.html %} -->
+        
+       
+    </div>
+</header>
