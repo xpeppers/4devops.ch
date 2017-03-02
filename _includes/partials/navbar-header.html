@@ -23,7 +23,7 @@
                 <li><a href="#sponsors" class="hidden-sm">{{ site.data.t[page.locale].organizers }}</a></li>
                 <li><a href="#venue" class="hidden-sm">{{ site.data.t[page.locale].venue }}</a></li>
                 <li><a href="#footer-action" class="hidden-sm">{{ site.data.t[page.locale].signup }}</a></li>
-                <li><a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfmpVfKAJkBKiR8g0FAfoCQLXTPY0cVKFe0abqsvPkGUwj7gg/viewform" class="hidden-sm">CFP</a></li>
+                <li><a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfmpVfKAJkBKiR8g0FAfoCQLXTPY0cVKFe0abqsvPkGUwj7gg/viewform">CFP</a></li>
                 <li>
                   <a href="/">EN</a>
                 </li>
@@ -54,10 +54,12 @@
        
         <div style="margin-bottom:20px">
             <div class="col-sm-12 col-md-6 col-md-offset-3"  style="margin-bottom:20px">
+                <h2>{{ site.data.t[page.locale].submit_title }}</h2>
                 <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfmpVfKAJkBKiR8g0FAfoCQLXTPY0cVKFe0abqsvPkGUwj7gg/viewform" class="hidden-sm btn btn-lg btn-default btn-block">{{ site.data.t[page.locale].submit_cfp }}</a>
+                <span style="line-height: 2.7;">{{ site.data.t[page.locale].submit_end }}</span>
             </div>
 
-            <div class="col-sm-12 col-md-6 col-md-offset-3">
+            <div class="col-sm-12 col-md-6 col-md-offset-3 hidden">
                 <a href="#footer-action" class="hidden-sm btn btn-lg btn-default btn-block">{{ site.data.t[page.locale].join_now }}</a>
             </div>
         </div>
