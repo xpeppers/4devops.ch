@@ -72,6 +72,11 @@ body .header {
     background-color: rgba(33, 33, 33, 0.7);
 }
 
+.timeline-content h2 span {
+
+    font-weight: 100;
+}
+
 .header:before {
     content: '';
     display: block;

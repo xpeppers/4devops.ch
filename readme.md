@@ -5,7 +5,7 @@
 Be Careful the folder with the source is under `_includes`.
 
 
-### setup
+### Setup
 
 ```
 printf "source 'https://rubygems.org'\ngem 'github-pages'\n" > Gemfile

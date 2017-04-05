@@ -5,12 +5,34 @@
             <h4>{{ site.data.t[page.locale].abstracts }}</h4>
         </div>
 
+
+        <div class="row abstract">
+            <div class="col-xs-3 col-sm-2 text-center">
+                <img src="/images/jorg_schad.jpg" alt="speaker" class="img-circle abstract-speaker-avatar">
+                <p>Jörg Schad</p>
+                <p>Mesosphere.io</p>
+            </div>
+            <blockquote class="col-xs-9 col-sm-10 blockquote">
+                <h5>Downtime is not an option - How DC/OS keeps apps running despite failures and updates</h5>
+                <p>Downtime is not an option - How DC/OS keeps apps running despite
+                    failures and updates</p>
+
+                <p>Congratulations, your app is deployed to production and running! But
+                    wait, how do you ensure it stays running? There will be node failures,
+                    network failures, software bugs, and updates trying to prevent this.
+                    This talk will explore how DC/OS is both robust and self-healing, and
+                    how DC/OS keeps your application available despite such failures,
+                    application updates and varying workloads.
+                </p></blockquote>
+        </div>
+
         <div class="row abstract">
             <div class="col-xs-3 col-sm-2 text-center">
                 <img src="/images/michele_orsi.jpg" alt="speaker" class="img-circle abstract-speaker-avatar">
                 <p>Michele Orsi</p>
                 <img src="/images/manuel-carlo-ranieri.jpg" alt="speaker" class="img-circle abstract-speaker-avatar">
                 <p>Manuel Ranieri</p>
+                <p>Lastminute.com</p>
             </div>
             <blockquote class="col-xs-9 col-sm-10 blockquote">
                 <h5>Tales from Lastminute.com Machine Room: Our Journey Towards a Full On-Premise Kubernetes Architecture in Production</h5>
@@ -18,9 +40,6 @@
 
                 </p><p> What happens if you challenge the way you deliver your products with a new infrastructure based on Kubernetes?
                     You’ll have to face classical developing, deploying and monitoring paradigms and bring everything to an entirely different level. It will also have to kept in mind that the business expects continuous delivery of new features without impact on the final customers experience.
-
-            </p><p>In this presentation we will explore our one-year-long journey to move a full business flow from a well-known legacy platform to Kubernetes through a seamless migration.
-                    We’ll dive into the full tech stack, from the services we give to our development teams to the way we provision servers, without forgetting the secret sauce we applied to make it happen.
 
             </p><p> We will not hide the failures, the problems and the wrong assumptions we made along the way, but we will celebrate lessons learnt and the goal we achieved; allowing us to boost time-to-market and reliability of our systems.</p>
             </blockquote>
@@ -30,6 +49,7 @@
             <div class="col-xs-3 col-sm-2 text-center">
                 <img src="/images/giulio_de_donato.jpg" alt="speaker" class="img-circle abstract-speaker-avatar">
                 <p>Giulio De Donato</p>
+
             </div>
             <blockquote class="col-xs-9 col-sm-10 blockquote">
                 <h5>Container orchestration: the cold war</h5>
@@ -40,17 +60,48 @@
             </blockquote>
         </div>
 
+
         <div class="row abstract">
             <div class="col-xs-3 col-sm-2 text-center">
-                <img src="/images/question-mark15.jpg" alt="speaker" class="img-circle abstract-speaker-avatar">
-                <p> you? </p>
+                <img src="/images/lorenzo_fontana.jpeg" alt="speaker" class="img-circle abstract-speaker-avatar">
+                <p>Lorenzo Fontana</p>
+
             </div>
             <blockquote class="col-xs-9 col-sm-10 blockquote">
-                <h5>More talks soon</h5>
-                <h3><a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfmpVfKAJkBKiR8g0FAfoCQLXTPY0cVKFe0abqsvPkGUwj7gg/viewform" class="text-left hidden-sm btn btn-lg btn-default btn-block" style="    text-align: left;">
-                    {{ site.data.t[page.locale].submit_cfp }}</a>
-                </h3>
-                <p> {{ site.data.t[page.locale].submit_cfp_more }}</p>
+                <h5>Hardware Virtualized Container Runtimes</h5>
+                <p>Thinking about containers and how they are empowering you and your workflow you might realize that the real advantages of containers are not residing in the fact that they are the definition of OS level virtualization but that in being just a consequence of a whole ecosystem born around them.
+                    This talk explores the possibilities in term of hardening and portability given by different combinations of OS and Hardware virtualized container runtimes by providing ideas and working examples.</p>
+            </blockquote>
+        </div>
+
+
+
+
+        <div class="row abstract">
+            <div class="col-xs-3 col-sm-2 text-center">
+                <img src="/images/paolo.tonin.jpeg" alt="speaker" class="img-circle abstract-speaker-avatar">
+                <p>Paolo Tonin</p>
+            </div>
+            <blockquote class="col-xs-9 col-sm-10 blockquote">
+                <h5>Boycott Docker</h5>
+                <p>Docker si propone come uno strumento comodo e utile per semplificare la gestione dell'infrastruttura di applicazioni e servizi.
+                    A causa della eccessiva rapidità di sviluppo e di alcune scelte architetturali, lo hanno reso uno strumento non adatto a tutti gli utilizzi. Nei casi reali introduce notevole complessità, alle volte non giustificata, poichè spinge all'utilizzo di tutta una serie di strumenti aggiuntivi non compresi all'interno di Docker per gestire l'infrastruttura. Nel talk esploreremo pro e contro di alcuni scenari di utilizzo e sfateremo anche qualche mito legato all'hype e alle "mode" del momento su questi temi.</p></blockquote>
+            </blockquote>
+        </div>
+
+
+        <div class="row abstract">
+            <div class="col-xs-3 col-sm-2 text-center">
+                <img src="/images/andrea_tosatto.jpg" alt="speaker" class="img-circle abstract-speaker-avatar">
+                <p>Andrea Tosatto</p>
+            </div>
+            <blockquote class="col-xs-9 col-sm-10 blockquote">
+                <h5>Mixed VMs and Containers workloads with Kubernetes</h5>
+                <p>Real world production systems have heterogeneous workloads, that can require multiple layers of orchestration.
+                    Not all the workloads are suitable to be containerized, and very often containers run on virtual machines scheduled by a cloud-scheduler (AWS, OpenStack, GCloud, etc).
+                    Managing and maintaining this kind of infrastructures on-premise (or in hybrid scenarios) could have lot of operations and maintenance costs and risk.
+                    In this talk we will present how Kubernetes can be used to schedule mixed VM and Docker workloads reducing operations and maintenance costs and risks.
+                    </p>
             </blockquote>
         </div>
 
