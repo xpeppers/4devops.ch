@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="author" content="4Devops.ch">
+        <meta name="description" content="4DevOps.CH - A Chiasso Container conference">
+        <meta name="keywords" content="4devops, docker,container, chiasso, xpeppers">
+        <link rel="shortcut icon" href="/images/favicon.ico">
+
+        <link rel="apple-touch-icon" sizes="76x76" href="/images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="/images/manifest.json">
+        <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="theme-color" content="#ffffff">
+
+        <title>Workshop - training microservices in AWS ECS - Amazon EC2 Container Service</title>
+        <link href="/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/css/custom.css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,600' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+        <link href="/css/plugins/animate.css" rel="stylesheet">
+         <link href="/css/plugins/slick.css" rel="stylesheet">
+        <!-- <link href="/css/plugins/magnific-popup.css" rel="stylesheet"> -->
+        <!-- <link href="/css/plugins/font-awesome.css" rel="stylesheet"> -->
+        <link href="/css/plugins/streamline-icons.css" rel="stylesheet">
+        <link href="/css/event.css" rel="stylesheet">
+        <link href="/css/themes/mint.css" rel="stylesheet">
+        <!--[if lt IE 9]>
+            <script src="/js/ie/respond.min.js"></script>
+        <![endif]-->
+        <script src="/js/modernizr.min.js"></script>
+        <script src="/js/plugins/pace.js"></script>
+
+        <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-87383155-2', 'auto');
+    ga('send', 'pageview');
+</script>
+
+
+    </head>
+
+    <body class="animate-page" data-spy="scroll" data-target="#navbar" data-offset="100">
+
+        <!--Preloader div-->
+        <div class="preloader"></div>
+
+        <nav class="navbar navbar-default navbar-fixed-top reveal-menu js-reveal-menu reveal-menu-hidden" style="top: 0;">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-left">
+              <li class="active-forever">
+                <a class="navbar-brand" href="/#">
+                  4Devops.ch
+                </a>
+              </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+
+
+                <li class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        23rd - The Workshop day
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="/workshop-microservices-aws-ecs">Microservices on AWS ECS</a></li>
+
+                        <li><a href="/workshop-corso-docker">Corso Docker</a></li>
+
+                        <li><a href="/workshop-infrastruttura.html">Progettare e far evolvere infrastrutture su AWS</a>
+                    </ul>
+                </li>
+
+
+
+                <li>
+                    <button class="btn btn-default" type="button">
+                        <a href="/#schedule">24th - The Conference day</a>
+                    </button>
+                </li>
+                <!-- <li><a href="/#speakers">Speakers</a></li> -->
+                <li><a href="/#sponsors" class="hidden-sm">Who</a></li>
+                <li><a href="/#venue" class="hidden-sm">Venue</a></li>
+                <li><a href="/#footer-action" class="hidden-sm">Join</a></li>
+                <li><a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfmpVfKAJkBKiR8g0FAfoCQLXTPY0cVKFe0abqsvPkGUwj7gg/viewform">CFP</a></li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+
+
+         
+<header id="top" class="header">
+    <div class="container">
+        <div class="header_top-bg1">
+            <div class="logo">
+                <a href="#" class="heading fadeInDown">
+                    <h1>Corso Docker
+                    </h1>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h4>Contenuto del workshop</h4>
+            <p>Docker &egrave; un progetto open source che automatizza il deployment di applicazioni all&rsquo;interno di Container software, fornendo un&rsquo;astrazione addizionale grazie alla virtualizzazione a livello di sistema operativo. Docker utilizza le funzionalit&agrave; di isolamento delle risorse del kernel Linux come ad esempio cgroups e namespaces per consentire a &ldquo;container&rdquo; indipendenti di coesistere sulla stessa istanza, evitando l&rsquo;installazione e la manutenzione di una macchina virtuale.</p>
+            <p><strong></strong></p>
+            <h4>Intro:</h4>
+            <p>Il workshop sar&agrave; introduttivo all&rsquo;ecosistema Docker e ai principali concetti legati al mondo dei container.</p>
+            <p><strong></strong></p>
+            <p>Durante il workshop verranno presentate slide ed esercizi su argomenti avanzati: demo da istanze AWS (swarm e overlay inclusi) con immagini basate su alpine, incluse le nuove features di sicurezza e data volume.</p>
+            <p><strong></strong></p>
+            <h4>Prerequisiti:</h4>
+            <p>&Egrave; richiesta familiarit&agrave; con gli ambienti UN*X sia per quanto concerne i concetti di funzionamento (servizi, permessi, filesystem, &hellip;) sia per l&rsquo;utilizzo dell&rsquo;ambiente a riga di comando.</p>
+            <p><strong></strong></p>
+            <p>&Egrave; necessario avere il proprio portatile con una VM ubuntu 14.04 con docker installato (seguendo la procedura online in modo da avere l&rsquo;ultima release disponibile). Docker consiglia ubuntu per il supporto nativo ad aufs.</p>
+            <p><strong></strong></p>
+            <h4>Programma:</h4>
+            <p>Il workshop si svolger&agrave; Gioved&igrave; 9 Marzo dalle 10:00 alle 18:00 a Bologna presso il Savoia Hotel Regency in via del Pilastro n. 2. Di seguito l&rsquo;Agenda della giornata.</p>
+            <p><strong></strong></p>
+            <h5>&ndash; Intro to containers</h5>
+            <p><strong></strong></p>
+            <p>Containers vs virtualization</p>
+            <p>Containers for isolation</p>
+            <p>Shipping containers</p>
+            <p>Docker, containers and images</p>
+            <p>Running and managing containers</p>
+            <p>Building images</p>
+            <p>Managing and distributing images</p>
+            <h5>&ndash; Dockerfile: FROM, RUN, ADD, ENV&hellip;</h5>
+            <p><strong></strong></p>
+            <p>Container and service?</p>
+            <p>Volumes and data volumes</p>
+            <p>Bind and managed</p>
+            <p>Link</p>
+            <p>Demo (AWS)</p>
+            <h5>&ndash; Networking</h5>
+            <p><strong></strong></p>
+            <p>Container Network Model</p>
+            <p>Demo (AWS)</p>
+            <h5>&ndash; Manage resources</h5>
+            <p><strong></strong></p>
+            <p>Memory limits, CPU, Access to devices</p>
+            <h5>&ndash; Container Security</h5>
+            <p><strong></strong></p>
+            <p>Seccomp, Userns, Capabilities&hellip;</p>
+            <h5>&ndash; Clustering and orchestrator: swarm modeHost distribution: machine</h5>
+            <p><strong></strong></p>
+            <p>Demo (AWS)</p>
+            <p>Swarm network model</p>
+            <h5>&ndash; Manage complex architecture: compose</h5>
+            <p><strong></strong></p>
+            <p>Demo (AWS)</p>
+            <h4>Docente:</h4>
+            <p>Francesco Tornieri, si occupa di sicurezza informatica e di sistemi open-source da oltre quindici anni. Ha pubblicato numerosi articoli su riviste come Linux Journal e Hakin9. E&rsquo; autore del libro &ldquo;Linux. Configurarlo al meglio&rdquo;. &Egrave; membro dell&rsquo;AIPSI &ndash; Associazione Italiana Professionisti Sicurezza Informatica. E&rsquo; certificatore CAcert per certificati SSL. Ricopre la carica di assistente universitario presso l&rsquo;Universit&agrave; Cattolica di Milano, cattedre di &ldquo;Informatica 2&rdquo; e &ldquo;Sistemi operativi per le banche on-line&rdquo;. E&rsquo; trainer certificato Docker.</p>
+            <p><strong></strong></p>
+            <h4>FAQ:</h4>
+            <p>Come posso ottenere la Fattura una volta acquistato il Corso?</p>
+            <p><strong>Invia la richiesta di fatturazione all&rsquo;indirizzo info@kiratech.it, e sar&agrave; nostra cura inviarti la fattura il prima possibile.</strong></p>
+</div>
+
+
+
+<div class="container">
+    <h4 class="headline wow fadeInDown" data-wow-delay="0.1s">Prendi il biglietto</h4>
+    <p>I workshop saranno svolti presso il Palazzo dei Congressi Lugano. L'acquisto del workshop da diritto all'accesso gratuito alla conferenza del giorno seguente.</p>
+    <div class="eventbrite-container">
+        <iframe  src="//eventbrite.it/tickets-external?eid=33457560464&ref=etckt" frameborder="0" height="214" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe>
+        <div style="font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:100%; text-align:left;" ><a class="powered-by-eb" style="color: #dddddd; text-decoration: none;" target="_blank" href="http://www.eventbrite.it/r/etckt">Eventbrite</a></div>
+    </div>
+</div>
+
+        </div>
+    </div>
+
+
+        <section class="sponsors" id="sponsors">
+    <div class="container">
+        <div class="section-title wow fadeInUp">
+            <h4>ORGANIZERS</h4>
+        </div>
+
+    </div>
+
+
+
+
+    <div class="row abstract">
+        <div class="col-xs-5 col-sm-4 text-center">
+            <a href="http://www.lastminute.com/" target="_blank" class="sponsor">
+                <img src="/images/lastminute.png" class="img-responsive" alt="Last Minute">
+            </a>
+        </div>
+        <blockquote class="col-xs-6 col-sm-8 blockquote">
+
+            <p>We are an international listed Group, among the worldwide leaders in the online travel industry, and we operate a portfolio of well-known brands such as lastminute.com, Bravofly, Rumbo, Volagratis and Jetcost.
+            </p><p>We are a technological company at his core, headquartered in Switzerland (Chiasso), with offices in Milan, Madrid, London, Bengaluru, where more than 1,100 people enjoy working with us.
+
+        </p><p>Every month the Group reaches across all its websites and mobile apps (in 17 languages and 40 countries) 43 million users that search for and book their travel and leisure experiences.
+        </p><p>This is possible thanks to the 300+ people in Tech who are building and evolving a scalable and resilient platform.
+        </p>
+
+
+        </blockquote>
+    </div>
+
+    <div class="row abstract">
+        <div class="col-xs-5 col-sm-4 text-center">
+            <a href="http://www.4devops.it/" target="_blank" class="sponsor main">
+                <img src="/images/4devops.png" class="img-responsive" alt="XPeppers">
+            </a>
+        </div>
+        <blockquote class="col-xs-6 col-sm-8 blockquote">
+
+            <p>4DevOps è un'alleanza di quattro aziende che operano sul territorio italiano ed europeo:
+                abbiamo un'esperienza ormai pluriennale nel trattare i temi dell'IT,
+                e abbiamo deciso di unire la nostra proposta commerciale DevOps per meglio servire i nostri clienti.
+            </p>
+
+
+            <p>4DevOps intende offrire alle aziende un metodo, le tecnologie e l’esperienza per intraprendere un processo di adeguamento del proprio IT. L’obiettivo delle aziende che compongono 4DevOps è di creare valore per i propri clienti, aiutandoli ad adottare i principi e le tecniche DevOps.
+            </p>
+
+
+            <div class="col-xs-12">
+            <div class="col-sm-3 portfolio-item">
+                <a href="http://www.biodec.com" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <!-- <i class="fa fa-search-plus fa-3x"></i> -->
+                        </div>
+                    </div>
+                    <img src="/images/company-logo-biodec.png" class="img-responsive" alt="">
+                </a>
+            </div>
+            <div class="col-sm-3 portfolio-item">
+                <a href="https://www.ideato.it/" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <!-- <i class="fa fa-search-plus fa-3x"></i> -->
+                        </div>
+                    </div>
+                    <img src="/images/company-logo-ideato.png" class="img-responsive" alt="">
+                </a>
+            </div>
+            <div class="col-sm-3 portfolio-item">
+                <a href="http://www.kiratech.it" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <!-- <i class="fa fa-search-plus fa-3x"></i> -->
+                        </div>
+                    </div>
+                    <img src="/images/company-logo-kiratech.png" class="img-responsive" alt="">
+                </a>
+            </div>
+            <div class="col-sm-3 portfolio-item">
+                <a href="http://xpeppers.com" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <!-- <i class="fa fa-search-plus fa-3x"></i> -->
+                        </div>
+                    </div>
+                    <img src="/images/company-logo-xpeppers.png" class="img-responsive" alt="">
+                </a>
+            </div>
+            </div>
+        </blockquote>
+    </div>
+
+
+</section>
+
+
+        <!-- <div class="highlight">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="contact-box">
+                    <img src="images/location-icon.png" alt="location icon" class="wow zoomIn">
+                    <h5>ADDRESS</h5>
+                    <p>Level 5, Meet n Party,
+                        <br>Barnhusgatan 7 b,
+                        <br> 125 Stockholm, Sweden
+                        <br>
+                        <br>Time: 10:30 AM to 3:30 PM</p>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="contact-box">
+                    <img src="images/email-icon.png" alt="email icon" class="wow zoomIn" data-wow-delay="0.3s">
+                    <h5>CONTACT</h5>
+                    <p><a href="mailto:gather@eventwebsite.com">gather@eventwebsite.com</a>
+                        <br> <a href="mailto:sponsor@thisevent.com">sponsor@thisevent.com</a>
+                        <br>
+                        <br> +1 400 253 1800
+                        <br> +33 230 58 5420
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ -->
+
+        <footer>
+
+	<div>
+		 <a href="http://4devops.it">4Devops Italia</a>
+	</div>
+
+	<div class="container">
+		<div class="row">
+
+		</div>
+
+
+
+	</div>
+
+<!--
+    <div class="social-icons">
+        <a href="#" class="wow zoomIn"> <i class="fa fa-twitter"></i> </a>
+        <a href="#" class="wow zoomIn" data-wow-delay="0.2s"> <i class="fa fa-facebook"></i> </a>
+        <a href="#" class="wow zoomIn" data-wow-delay="0.4s"> <i class="fa fa-linkedin"></i> </a>
+    </div>
+-->
+
+</footer>
+
+
+        <a href="#top" class="back_to_top"><img src="/images/back_to_top.png" alt="back to top"></a>
+
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/plugins/countdown.js"></script>
+        <script src="/js/plugins/slick.js"></script>
+        <script src="/js/plugins/validate.js"></script>
+        <script src="/js/plugins/appear.js"></script>
+        <script src="/js/plugins/count-to.js"></script>
+        <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+        <script src="/js/plugins/infobox.js"></script>
+        <script src="/js/plugins/google-map.js"></script>
+        <script src="/js/plugins/directions.js"></script>
+        <script src="/js/includes/subscribe.js"></script>
+        <script src="/js/includes/contact_form.js"></script>
+        <script src="/js/main.js"></script>
+    </body>
+</html>
