@@ -1135,7 +1135,7 @@ p,
 
 .timeline-block {
     position: relative;
-    margin: 1em 0;
+    margin: 0em 0;
 }
 
 .timeline-block:after {
@@ -1155,7 +1155,7 @@ p,
 
 @media only screen and (min-width: 1170px) {
     .timeline-block {
-        margin: 2em 0;
+        margin: 0em 0;
     }
     .timeline-block:first-child {
         margin-top: 0;

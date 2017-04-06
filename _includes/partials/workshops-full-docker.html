@@ -15,36 +15,61 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-12">
-    <h4>Contenuto del workshop</h4>
-    <p>Le sfide che portano ad un sistema distribuito basato su micro-servizi sono molte. Le aziende devono spesso modificare il loro modo di sviluppare, il loro modello organizzativo deve adattarsi ai processi DevOps e le scelte tecniche devono essere orientate a disaccoppiare il più possibile i componenti.
-        <br>
-        Amazon Web Services sta rapidamente abbracciando architetture basate su micro-servizi cloud-native. Per velocizzare l’adozione dei micro-servizi AWS ha introdotto Docker come sistema per “containerizzare” i carichi di lavoro di applicazioni esistenti o nuove. In particolare AWS ha lanciato il servizio ECS (Amazon Container Service) per gestire in maniera semplice ed efficiente un cluster di tali container e ECR (Elastic Container Registry) come registro di contenitori Docker completamente gestito.
-        <br>
-        Durante il workshop metteremo in piedi una pipeline attraverso il servizio AWS CodePipeline che ci permetterà di automatizzare il flusso che va dalla creazione dell’intera infrastruttura, utilizzando AWS Cloudformation, fino all’esecuzione del servizio sul cluster Amazon ECS. Vedremo poi come Amazon Blox (progetto open-source) ci fornisce una serie di API per creare orchestratori personalizzati.
-    </p>
-    <h4>Argomenti</h4>
-    <ul>
-        <li>Deployment on AWS (CLoudformation, Opsworks, Beanstalk)</li>
-        <li>CI&CD on AWS (CodeDeploy, CodeBuild, CodePipeline)</li>
-        <li>Container on AWS (Elastic Container Services)</li>
-        <li>All together: build, test and run a microservices</li>
-    </ul>
-    <h4>Cosa impareremo</h4>
-    <p>Impareremo a creare una Pipeline di CI&CD che va dal test di un micro servizio fino al deploy su un cluster di container docker passando per la creazione automatica dell’infrastruttura (Infrastruttura come codice).
-    </p>
-    <h4>A chi è rivolto</h4>
-    <p>DevOps Engineer, Systems Engineer, Developer
-    </p>
-    <h4>Requisiti</h4>
-    <p>Notebook con:
-    </p>
-    <ul>
-        <li>Docker</li>
-        <li>Apache Maven</li>
-        <li>Editor (Atom, Sublime, etc)</li>
-        <li>AWS Command Line</li>
-    </ul>
-
+            <h4>Contenuto del workshop</h4>
+            <p>Docker &egrave; un progetto open source che automatizza il deployment di applicazioni all&rsquo;interno di Container software, fornendo un&rsquo;astrazione addizionale grazie alla virtualizzazione a livello di sistema operativo. Docker utilizza le funzionalit&agrave; di isolamento delle risorse del kernel Linux come ad esempio cgroups e namespaces per consentire a &ldquo;container&rdquo; indipendenti di coesistere sulla stessa istanza, evitando l&rsquo;installazione e la manutenzione di una macchina virtuale.</p>
+            <p><strong></strong></p>
+            <h4>Intro:</h4>
+            <p>Il workshop sar&agrave; introduttivo all&rsquo;ecosistema Docker e ai principali concetti legati al mondo dei container.</p>
+            <p><strong></strong></p>
+            <p>Durante il workshop verranno presentate slide ed esercizi su argomenti avanzati: demo da istanze AWS (swarm e overlay inclusi) con immagini basate su alpine, incluse le nuove features di sicurezza e data volume.</p>
+            <p><strong></strong></p>
+            <h4>Prerequisiti:</h4>
+            <p>&Egrave; richiesta familiarit&agrave; con gli ambienti UN*X sia per quanto concerne i concetti di funzionamento (servizi, permessi, filesystem, &hellip;) sia per l&rsquo;utilizzo dell&rsquo;ambiente a riga di comando.</p>
+            <p><strong></strong></p>
+            <p>&Egrave; necessario avere il proprio portatile con una VM ubuntu 14.04 con docker installato (seguendo la procedura online in modo da avere l&rsquo;ultima release disponibile). Docker consiglia ubuntu per il supporto nativo ad aufs.</p>
+            <p><strong></strong></p>
+            <h4>Programma:</h4>
+            <p>Il workshop si svolger&agrave; Gioved&igrave; 9 Marzo dalle 10:00 alle 18:00 a Bologna presso il Savoia Hotel Regency in via del Pilastro n. 2. Di seguito l&rsquo;Agenda della giornata.</p>
+            <p><strong></strong></p>
+            <h5>&ndash; Intro to containers</h5>
+            <p><strong></strong></p>
+            <p>Containers vs virtualization</p>
+            <p>Containers for isolation</p>
+            <p>Shipping containers</p>
+            <p>Docker, containers and images</p>
+            <p>Running and managing containers</p>
+            <p>Building images</p>
+            <p>Managing and distributing images</p>
+            <h5>&ndash; Dockerfile: FROM, RUN, ADD, ENV&hellip;</h5>
+            <p><strong></strong></p>
+            <p>Container and service?</p>
+            <p>Volumes and data volumes</p>
+            <p>Bind and managed</p>
+            <p>Link</p>
+            <p>Demo (AWS)</p>
+            <h5>&ndash; Networking</h5>
+            <p><strong></strong></p>
+            <p>Container Network Model</p>
+            <p>Demo (AWS)</p>
+            <h5>&ndash; Manage resources</h5>
+            <p><strong></strong></p>
+            <p>Memory limits, CPU, Access to devices</p>
+            <h5>&ndash; Container Security</h5>
+            <p><strong></strong></p>
+            <p>Seccomp, Userns, Capabilities&hellip;</p>
+            <h5>&ndash; Clustering and orchestrator: swarm modeHost distribution: machine</h5>
+            <p><strong></strong></p>
+            <p>Demo (AWS)</p>
+            <p>Swarm network model</p>
+            <h5>&ndash; Manage complex architecture: compose</h5>
+            <p><strong></strong></p>
+            <p>Demo (AWS)</p>
+            <h4>Docente:</h4>
+            <p>Francesco Tornieri, si occupa di sicurezza informatica e di sistemi open-source da oltre quindici anni. Ha pubblicato numerosi articoli su riviste come Linux Journal e Hakin9. E&rsquo; autore del libro &ldquo;Linux. Configurarlo al meglio&rdquo;. &Egrave; membro dell&rsquo;AIPSI &ndash; Associazione Italiana Professionisti Sicurezza Informatica. E&rsquo; certificatore CAcert per certificati SSL. Ricopre la carica di assistente universitario presso l&rsquo;Universit&agrave; Cattolica di Milano, cattedre di &ldquo;Informatica 2&rdquo; e &ldquo;Sistemi operativi per le banche on-line&rdquo;. E&rsquo; trainer certificato Docker.</p>
+            <p><strong></strong></p>
+            <h4>FAQ:</h4>
+            <p>Come posso ottenere la Fattura una volta acquistato il Corso?</p>
+            <p><strong>Invia la richiesta di fatturazione all&rsquo;indirizzo info@kiratech.it, e sar&agrave; nostra cura inviarti la fattura il prima possibile.</strong></p>
 </div>
 
 

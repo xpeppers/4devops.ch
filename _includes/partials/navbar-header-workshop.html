@@ -20,7 +20,27 @@
             <ul class="nav navbar-nav navbar-right">
 
 
-                <li><a href="/#schedule">24th May - Conference</a></li>
+                <li class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        23rd - The Workshop day
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="/workshop-microservices-aws-ecs">Microservices on AWS ECS</a></li>
+
+                        <li><a href="/workshop-corso-docker">Corso Docker</a></li>
+
+                        <li><a href="/workshop-infrastruttura.html">Progettare e far evolvere infrastrutture su AWS</a>
+                    </ul>
+                </li>
+
+
+
+                <li>
+                    <button class="btn btn-default" type="button">
+                        <a href="/#schedule">24th - The Conference day</a>
+                    </button>
+                </li>
                 <!-- <li><a href="/#speakers">Speakers</a></li> -->
                 <li><a href="/#sponsors" class="hidden-sm">{{ site.data.t[page.locale].organizers }}</a></li>
                 <li><a href="/#venue" class="hidden-sm">{{ site.data.t[page.locale].venue }}</a></li>

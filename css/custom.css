@@ -77,6 +77,11 @@ body .header {
     font-weight: 100;
 }
 
+
+.btn a:hover{
+    color: #ffffff;
+}
+
 .header:before {
     content: '';
     display: block;
