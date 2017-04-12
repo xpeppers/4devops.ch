@@ -79,7 +79,7 @@
                         <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                        <li><a href="/workshop-microservices-aws-ecs">Microservices on AWS ECS</a></li>
+                        <li><a href="/workshop-microservices-aws-ecs">Building Microservices</a></li>
 
                         <li><a href="/workshop-corso-docker">Corso Docker</a></li>
 
@@ -115,8 +115,10 @@
         <div class="header_top-bg1">
             <div class="logo">
                 <a href="#" class="heading fadeInDown">
-                    <h1>Build, test and run a microservice in AWS ECS
+                    <h1>Building Microservices
                     </h1>
+                    <h4>Using Containers to Build a Microservices Architectures in the Cloud
+                    </h4>
                 </a>
             </div>
         </div>
@@ -127,33 +129,31 @@
     <div class="row">
         <div class="col-xs-12">
     <h4>Contenuto del workshop</h4>
-    <p>Le sfide che portano ad un sistema distribuito basato su micro-servizi sono molte. Le aziende devono spesso modificare il loro modo di sviluppare, il loro modello organizzativo deve adattarsi ai processi DevOps e le scelte tecniche devono essere orientate a disaccoppiare il più possibile i componenti.
+    <p>Le sfide che portano ad un sistema distribuito basato su microservizi sono molte. Le aziende devono spesso modificare il loro modo di sviluppare, il loro modello organizzativo deve adattarsi ai processi DevOps e le scelte tecniche devono essere orientate a disaccoppiare il più possibile i componenti.
         <br>
-        Amazon Web Services sta rapidamente abbracciando architetture basate su micro-servizi cloud-native. Per velocizzare l’adozione dei micro-servizi AWS ha introdotto Docker come sistema per “containerizzare” i carichi di lavoro di applicazioni esistenti o nuove. In particolare AWS ha lanciato il servizio ECS (Amazon Container Service) per gestire in maniera semplice ed efficiente un cluster di tali container e ECR (Elastic Container Registry) come registro di contenitori Docker completamente gestito.
+        Amazon Web Services sta rapidamente abbracciando architetture basate su microservizi cloud-native. Per velocizzare l’adozione dei microservizi AWS ha introdotto Docker come sistema per “containerizzare” i carichi di lavoro. In particolare AWS ha lanciato il servizio ECS (Amazon Elastic Container Service) per gestire in maniera semplice ed efficiente un cluster di tali container e ECR (Elastic Container Registry) come registro di contenitori Docker completamente gestito.
         <br>
-        Durante il workshop metteremo in piedi una pipeline attraverso il servizio AWS CodePipeline che ci permetterà di automatizzare il flusso che va dalla creazione dell’intera infrastruttura, utilizzando AWS Cloudformation, fino all’esecuzione del servizio sul cluster Amazon ECS. Vedremo poi come Amazon Blox (progetto open-source) ci fornisce una serie di API per creare orchestratori personalizzati.
+        Durante il workshop impareremo a usare tali servizi insieme ai servizi di CI/CD come CodeBuild e Codepipeline con l’obiettivo di creare una Pipeline di CI che va dalla build dell’immagine docker fino al deploy su un Cluster ECS in maniera completamente automatizzata. 
+    </p>
+    <h4>Cosa impareremo</h4>
+    <p>Impareremo a creare un Cluster ECS in grado di scalare e adattarsi al Workload. Impareremo a passare dal docker compose ai task/service di ECS utilizzando la CLI di Amazon con l’obiettivo di lanciare sul cluster in nostri container. Impareremo a creare una Pipeline di CI/CD che va dal test di un microservizio fino al deploy su ECS passando per la creazione automatica dell’infrastruttura con Cloudformation.
     </p>
     <h4>Argomenti</h4>
     <ul>
-        <li>Deployment on AWS (CLoudformation, Opsworks, Beanstalk)</li>
-        <li>CI&CD on AWS (CodeDeploy, CodeBuild, CodePipeline)</li>
-        <li>Container on AWS (Elastic Container Services)</li>
-        <li>All together: build, test and run a microservices</li>
+        <li>Deploy a containerized service on Amazon ECS</li>
+        <li>Build and Test a Docker image with AWS CodePipeline and CodeBuild</li>
+        <li>Create Infrastructure with AWS CodePipeline and AWS Cloudformation</li>
+        <li>Make a simple UAT with AWS Lambda</li>
     </ul>
-    <h4>Cosa impareremo</h4>
-    <p>Impareremo a creare una Pipeline di CI&CD che va dal test di un micro servizio fino al deploy su un cluster di container docker passando per la creazione automatica dell’infrastruttura (Infrastruttura come codice).
-    </p>
     <h4>A chi è rivolto</h4>
     <p>DevOps Engineer, Systems Engineer, Developer
     </p>
-    <h4>Requisiti</h4>
-    <p>Notebook con:
-    </p>
+    <h4>Prerequisiti</h4>
     <ul>
-        <li>Docker</li>
-        <li>Apache Maven</li>
+        <li>Docker engine and compose</li>
+        <li>AWS CLI</li>
         <li>Editor (Atom, Sublime, etc)</li>
-        <li>AWS Command Line</li>
+        <li>Maven</li>
     </ul>
 
 </div>
