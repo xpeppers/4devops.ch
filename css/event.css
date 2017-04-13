@@ -1257,10 +1257,7 @@ p,
         margin-left: 0;
         width: 47.3%;
     }
-    .timeline .timeline-block:nth-child(odd) .timeline-content h2,
-    .timeline .timeline-block:nth-child(odd) .timeline-content p {
-        text-align: right;
-    }
+
     .timeline-content::before {
         top: 24px;
         left: 100%;
