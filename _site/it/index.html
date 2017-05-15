@@ -73,7 +73,7 @@
             <ul class="nav navbar-nav navbar-right">
 
 
-                <li class="dropdown">
+                <!-- <li class="dropdown">
                     <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                         23rd - The Workshop day
                         <span class="caret"></span>
@@ -85,7 +85,7 @@
 
                         <li><a href="/workshop-infrastruttura.html">Progettare e far evolvere infrastrutture su AWS</a>
                     </ul>
-                </li>
+                </li> -->
 
 
 
@@ -219,7 +219,7 @@
 
         <div class="nav-center">
             <ul class="nav nav-pills" role="tablist" id="schedule-tabs">
-                <li role="presentation" ><a href="#day1" aria-controls="day1" role="tab" data-toggle="tab">23rd - Workshops</a></li>
+                <!-- <li role="presentation" ><a href="#day1" aria-controls="day1" role="tab" data-toggle="tab">23rd - Workshops</a></li> -->
                 <li role="presentation"class="active"><a href="#day2" aria-controls="day2" role="tab" data-toggle="tab">24th - Conference</a></li>
             </ul>
 
@@ -272,11 +272,23 @@
                         <div class="timeline-content">
                             <h2>Welcome Speech
                                 <span>4devops and lastminute.com</span></h2>
-                            <span class="date">09:40 AM</span>
+                            <span class="date">09:30 AM</span>
                         </div>
 
                     </div>
 
+                    <div class="timeline-block">
+                        <div class="timeline-bullet">
+
+                        </div>
+
+                        <div class="timeline-content">
+                            <h2>Keynote By Google - 
+                                <span>The journey from Borg to Kubernetes</span></h2>
+                            <p>by Mattia Gandolfi</p>
+                            <span class="date">09:40 AM</span>
+                        </div>
+                    </div>
 
                     <div class="timeline-block">
                         <div class="timeline-bullet">
@@ -286,8 +298,8 @@
                         <div class="timeline-content">
                             <h2>Downtime is not an option -
                                 <span>How DC/OS keeps apps running despite failures and updates</span></h2>
-                            <p>by Jörg Shad</p>
-                            <span class="date">10:00</span>
+                            <p>by Jörg Shad - Mesosphere core contributor</p>
+                            <span class="date">10:30 AM</span>
                         </div>
                     </div>
 
@@ -298,7 +310,7 @@
 
                         <div class="timeline-content">
                             <h2>Coffee break</h2>
-                            <span class="date">10:45 AM</span>
+                            <span class="date">11:00 AM</span>
                         </div>
                     </div>
 
@@ -313,7 +325,7 @@
                             <h2>Tales from Lastminute.com Machine Room:
                                 <span>Our Journey Towards a Full On-Premise Kubernetes Architecture in Production</span></h2>
                             <p>by Michele Orsi, Manuel Ranieri</p>
-                            <span class="date">11:00 AM</span>
+                            <span class="date">12:00 AM</span>
                         </div>
                     </div>
 
@@ -323,9 +335,9 @@
                         </div>
 
                         <div class="timeline-content">
-                            <h2>Container orchestration: the cold war</h2>
-                            <p>by Giulio De Donato</p>
-                            <span class="date">11:45 AM</span>
+                            <h2>Create a project and then Orchestrate it using Amazon EC2 Container Service (ECS)</h2>
+                            <p>Giulio De Donato</p>
+                            <span class="date">12:40 PM</span>
                         </div>
                     </div>
 
@@ -336,7 +348,7 @@
 
                         <div class="timeline-content">
                             <h2>Lunch time</h2>
-                            <span class="date">12:30 AM - 2:00 PM</span>
+                            <span class="date">13:15 AM - 2:00 PM</span>
                         </div>
                     </div>
 
@@ -346,7 +358,7 @@
                         </div>
 
                         <div class="timeline-content">
-                            <h2>Boycott Docker</h2>
+                            <h2>Docker: do's and don'ts</h2>
                             <p>Paolo Tonin</p>
                             <span class="date">2:00 PM</span>
                         </div>
@@ -413,7 +425,23 @@
             <h4>TALKS</h4>
         </div>
 
-
+    <div class="row abstract">
+            <div class="col-xs-3 col-sm-2 text-center">
+                <img src="/images/mattia_gandolfi.jpg" alt="speaker" class="img-circle abstract-speaker-avatar">
+                <p>Mattia Gandolfi</p>
+                <p>Google</p>
+            </div>
+            <blockquote class="col-xs-9 col-sm-10 blockquote">
+                <h5>Keynote - The journey from Borg to Kubernetes</h5>
+                <p>Google has pioneered the usage of containers at huge scale. </p>
+                <p>Learn how we designed our systems to handle insane traffic loads 
+                    on our six services with more than 1 billion of users, 
+                    orchestrating complex, globally distributed applications,
+                    and how we made this powerful infrastructure 
+                    and tools available for customers wanting to embrace the power of DevOps and Cloud computing. 
+                </p></blockquote>
+        </div>
+        
         <div class="row abstract">
             <div class="col-xs-3 col-sm-2 text-center">
                 <img src="/images/jorg_schad.jpg" alt="speaker" class="img-circle abstract-speaker-avatar">
@@ -460,11 +488,9 @@
 
             </div>
             <blockquote class="col-xs-9 col-sm-10 blockquote">
-                <h5>Container orchestration: the cold war</h5>
-                <p>L’ecosistema degli orchestratori di container è in rapido movimento,
-                    una galassia di piattaforme e framework.
-                    Come si fa a scegliere quello giusto per le vostre esigenze?
-                    Vediamo tutti gli orchestratori in commercio, con i loro pro e contro: DC/OS, Kubernetes, Docker e anche quelli meno famosi ma che saranno promesse.</p>
+                <h5>Create a project and then Orchestrate it using Amazon EC2 Container Service (ECS)</h5>
+                <p>Esploriamo le vere potenzialità del servizio ECS mostrando i pro e i contro del servizio di container management offerto da Amazon Web Services. Mostriamo alcuni casi d’uso, orchestriamo via CLI, monitoriamo i nostri container e buone pratiche nella creazione di un progetto, e la condivisione e i pro del devops.
+                </p>
             </blockquote>
         </div>
 
@@ -521,70 +547,6 @@
 </section>
 
 
-        <section class="abstracts" id="abstracts">
-    <div class="container">
-
-        <div class="section-title wow fadeInUp">
-            <h4>WORKSHOPS</h4>
-        </div>
-
-
-        <div class="row abstract">
-            <div class="col-xs-3 col-sm-2 text-center">
-                <img src="/images/paolo.latella.jpg" alt="speaker" class="img-circle abstract-speaker-avatar">
-                <p>Paolo Latella <br>- XPeppers</p>
-            </div>
-            <blockquote class="col-xs-9 col-sm-10 blockquote">
-                <h5>Building Microservices</h5>
-                <p>Using Containers to Build a Microservices Architectures in the Cloud.
-                    <br><a href="/workshop-microservices-aws-ecs">More info ></a>
-                </p></blockquote>
-        </div>
-
-        <div class="row abstract">
-            <div class="col-xs-3 col-sm-2 text-center">
-                <img src="/images/francesco.tornieri.jpg" alt="speaker" class="img-circle abstract-speaker-avatar">
-                <p>Francesco Tornieri <br>- Kiratech</p>
-            </div>
-            <blockquote class="col-xs-9 col-sm-10 blockquote">
-                <h5>Docker course</h5>
-                <p>The workshop will introduce the Docker ecosystem and the principle concepts related to containers world.
-                    <br><a href="/workshop-corso-docker">More info ></a></p>
-            </blockquote>
-        </div>
-
-        <div class="row abstract">
-            <div class="col-xs-3 col-sm-2 text-center">
-                <img src="/images/paolo.tonin.jpeg" alt="speaker" class="img-circle abstract-speaker-avatar">
-                <p>Paolo Tonin<br>-Ideato</p>
-
-            </div>
-            <blockquote class="col-xs-9 col-sm-10 blockquote">
-                <h5>Progettare e far evolvere infrastrutture su AWS</h5>
-                <p>Questo workshop è rivolto a sistemisti, cloud architect, it managers che già utilizzano i servizi di AWS e che vogliono approfondire gli aspetti legati al design di infrastrutture resilienti e altamente disponibili.
-                    <br><a href="/workshop-infrastruttura">More info ></a></p>
-            </blockquote>
-        </div>
-
-
-
-    </div>
-</section>
-
-
-        <section class="footer-action" id="footer-action">
-    <div class="container">
-        <h4 class="headline-support wow fadeInDown"></h4>
-        <h2 class="headline wow fadeInDown" data-wow-delay="0.1s">REGISTRATI ALLA CONFERENZA</h2>
-        <p></p>
-         <div class="eventbrite-container">
-            <iframe  src="//eventbrite.it/tickets-external?eid=33457560464&ref=etckt" frameborder="0" height="214" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe>
-            <div style="font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:100%; text-align:left;" ><a class="powered-by-eb" style="color: #dddddd; text-decoration: none;" target="_blank" href="http://www.eventbrite.it/r/etckt">Eventbrite</a></div>
-        </div>
-    </div>
-</section>
-
-
         <!-- <section class="abstracts" id="abstracts">
     <div class="container">
 
@@ -620,7 +582,7 @@
         <div class="row abstract">
             <div class="col-xs-3 col-sm-2 text-center">
                 <img src="/images/paolo.tonin.jpeg" alt="speaker" class="img-circle abstract-speaker-avatar">
-                <p>Paolo Tonin<br>-Ideato</p>
+                <p>Paolo Tonin<br>- Ideato</p>
 
             </div>
             <blockquote class="col-xs-9 col-sm-10 blockquote">
@@ -633,7 +595,71 @@
 
 
     </div>
+</section> -->
+
+
+        <section class="footer-action" id="footer-action">
+    <div class="container">
+        <h4 class="headline-support wow fadeInDown"></h4>
+        <h2 class="headline wow fadeInDown" data-wow-delay="0.1s">REGISTRATI ALLA CONFERENZA</h2>
+        <p></p>
+         <div class="eventbrite-container">
+            <iframe  src="//eventbrite.it/tickets-external?eid=33706326530&ref=etckt" frameborder="0" height="214" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe>
+            <div style="font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:100%; text-align:left;" ><a class="powered-by-eb" style="color: #dddddd; text-decoration: none;" target="_blank" href="http://www.eventbrite.it/r/etckt">Eventbrite</a></div>
+        </div>
+    </div>
 </section>
+
+
+        <!-- <!-- <section class="abstracts" id="abstracts">
+    <div class="container">
+
+        <div class="section-title wow fadeInUp">
+            <h4>WORKSHOPS</h4>
+        </div>
+
+
+        <div class="row abstract">
+            <div class="col-xs-3 col-sm-2 text-center">
+                <img src="/images/paolo.latella.jpg" alt="speaker" class="img-circle abstract-speaker-avatar">
+                <p>Paolo Latella <br>- XPeppers</p>
+            </div>
+            <blockquote class="col-xs-9 col-sm-10 blockquote">
+                <h5>Building Microservices</h5>
+                <p>Using Containers to Build a Microservices Architectures in the Cloud.
+                    <br><a href="/workshop-microservices-aws-ecs">More info ></a>
+                </p></blockquote>
+        </div>
+
+        <div class="row abstract">
+            <div class="col-xs-3 col-sm-2 text-center">
+                <img src="/images/francesco.tornieri.jpg" alt="speaker" class="img-circle abstract-speaker-avatar">
+                <p>Francesco Tornieri <br>- Kiratech</p>
+            </div>
+            <blockquote class="col-xs-9 col-sm-10 blockquote">
+                <h5>Docker course</h5>
+                <p>The workshop will introduce the Docker ecosystem and the principle concepts related to containers world.
+                    <br><a href="/workshop-corso-docker">More info ></a></p>
+            </blockquote>
+        </div>
+
+        <div class="row abstract">
+            <div class="col-xs-3 col-sm-2 text-center">
+                <img src="/images/paolo.tonin.jpeg" alt="speaker" class="img-circle abstract-speaker-avatar">
+                <p>Paolo Tonin<br>- Ideato</p>
+
+            </div>
+            <blockquote class="col-xs-9 col-sm-10 blockquote">
+                <h5>Progettare e far evolvere infrastrutture su AWS</h5>
+                <p>Questo workshop è rivolto a sistemisti, cloud architect, it managers che già utilizzano i servizi di AWS e che vogliono approfondire gli aspetti legati al design di infrastrutture resilienti e altamente disponibili.
+                    <br><a href="/workshop-infrastruttura">More info ></a></p>
+            </blockquote>
+        </div>
+
+
+
+    </div>
+</section> -->
  -->
 
          <!-- <section class="speakers" id="speakers">
@@ -1001,8 +1027,8 @@
         <h4>Luogo</h4>
     </div>
 
-    <p class="text-center"><a href="https://goo.gl/maps/5EQ1nhSNq6n">
-    Workshops: Palazzo dei Congressi Lugano, Piazza Indipendenza 4, 6900 Lugano, Switzerland</a></p>
+    <!-- <p class="text-center"><a href="https://goo.gl/maps/5EQ1nhSNq6n">
+    Workshops: Palazzo dei Congressi Lugano, Piazza Indipendenza 4, 6900 Lugano, Switzerland</a></p> -->
     <p class="text-center"><a href="https://goo.gl/maps/51UEVdpSbPw">Conference: lastminute.com Offices, via Valdani 1, 6830, Chiasso Switzerland</a></p>
 
     <a href="https://goo.gl/maps/51UEVdpSbPw"><img class="img-responsive" src="/images/chiasso.jpg"></a>
